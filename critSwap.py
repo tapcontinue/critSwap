@@ -1,5 +1,5 @@
-import re
 import fileinput
+import re
 
 file_in = open("toc.txt", "rt", newline="\n")
 file_out = open("FinalToc.txt", "wt")
@@ -611,6 +611,21 @@ replacements = {
     "ͭ":"&#877;",
     "ͮ":"&#878;",
     "ͯ":"&#879;",
+    "¿":"&#191;",
+    "®":"&#174;",
+    "™":"&#8482;",
+    " ™":"&#8482;",
+    "™ ":"&#8482;",
+    " TM ":"&#8482;",
+    " tm ":"&#8482;",
+    " Tm ":"&#8482;",
+    " tM ":"&#8482;",
+    "©": "&#169;",
+    "“":"&#8220;",
+    "”":"&#8221;",
+    "‘":"&#8216;",
+    "’":"&#8217;",
+    "�":"",
 }
 
 lines = []
@@ -622,4 +637,3 @@ with open('toc.txt') as infile:
 with open('FinalToc.txt', 'w') as outfile:
     for line in lines:
         outfile.write(line)
-
